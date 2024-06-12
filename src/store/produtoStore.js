@@ -7,6 +7,7 @@ export const useProdutoStore = defineStore('produto', {
 			produtos: [],
 			totalProdutos: 0,
 			produtosMaiorEstoque: [],
+			produtosMenorEstoque: [],
 		};
 	},
 
@@ -26,6 +27,10 @@ export const useProdutoStore = defineStore('produto', {
 		getProdutosMaiorEstoque(state) {
 			return state.produtosMaiorEstoque;
 		},
+
+		getProdutosMenorEstoque(state) {
+			return state.produtosMenorEstoque;
+		},
 	},
 
 	actions: {
@@ -43,6 +48,10 @@ export const useProdutoStore = defineStore('produto', {
 
 		setProdutosMaiorEstoque(produtosEstoque) {
 			this.produtosMaiorEstoque = produtosEstoque;
+		},
+
+		setProdutosMenorEstoque(produtosEstoque) {
+			this.produtosMenorEstoque = produtosEstoque;
 		},
 	},
 });
