@@ -9,7 +9,7 @@ const usuario = ref({
 });
 
 const login = () => {
-  // Lógica de login aqui
+//TODO implemntar a logica
   console.log('Login:', usuario.value);
 };
 </script>
