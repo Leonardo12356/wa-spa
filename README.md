@@ -16,10 +16,6 @@ Esta é a aplicação frontend do sistema de gestão de estoque.
 
 ## Estrutura do Projeto
 
-- **.vscode/**: Configurações específicas do Visual Studio Code.
-- **node_modules/**: Módulos do Node.js.
-- **public/**: Arquivos públicos.
-  - **index.html:** Arquivo HTML principal.
 - **src/**
   - **assets/**: Arquivos estáticos (imagens, estilos, etc).
   - **components/**: Componentes Vue reutilizáveis.
