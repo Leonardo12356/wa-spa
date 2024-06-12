@@ -18,6 +18,7 @@ import {
 	CategoryScale,
 	LinearScale,
 } from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 import App from './App.vue';
 
@@ -43,6 +44,7 @@ ChartJS.register(
 	BarElement,
 	CategoryScale,
 	LinearScale,
+	ChartDataLabels,
 );
 
 createApp(App).use(router).use(createPinia()).use(vuetify).mount('#app');

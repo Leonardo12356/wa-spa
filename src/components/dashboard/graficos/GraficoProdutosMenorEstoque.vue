@@ -9,6 +9,18 @@
 	const options = ref({
 		responsive: true,
 		maintainAspectRatio: false,
+		indexAxis: 'x',
+		scales: {
+			x: {
+				display: false, // Hide the standard labels
+			},
+		},
+		plugins: {
+			datalabels: {
+				anchor: 'start',
+				align: 'start',
+			},
+		},
 	});
 
 	const bar_red_lighten_color = ref('#E57373');

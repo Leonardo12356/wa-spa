@@ -13,11 +13,8 @@ export async function getProdutoByID(idProduto) {
 }
 
 export async function getProdutosQuantidadeTotal() {
-	/**
-	 * @todo retornar para a rota original
-	 */
-	// const rota = '/produto/produtos/quantidade-total';
-	const rota = '/produtos-quantidade-total';
+	const rota = '/produto/produtos/quantidade-total';
+	// const rota = '/produtos-quantidade-total';
 
 	return http.get(rota);
 }
@@ -41,11 +38,8 @@ export async function deleteProduto(idProduto) {
 }
 
 export async function getMaiorEstoqueProduto() {
-	/**
-	 * @todo retornar para a rota original
-	 */
-	// const rota = '/produto/produtos/maior-estoque';
-	const rota = '/maior-estoque';
+	const rota = '/produto/produtos/maior-estoque';
+	// const rota = '/maior-estoque';
 
 	return http.get(rota, {
 		params: {
@@ -55,11 +49,8 @@ export async function getMaiorEstoqueProduto() {
 }
 
 export async function getMenorEstoqueProduto() {
-	/**
-	 * @todo retornar para a rota original
-	 */
-	// const rota = '/produto/produtos/estoque-zerado-negativo';
-	const rota = '/menor-estoque';
+	const rota = '/produto/produtos/estoque-zerado-negativo';
+	// const rota = '/menor-estoque';
 
 	return http.get(rota, {
 		params: {
