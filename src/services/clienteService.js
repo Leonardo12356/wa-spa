@@ -13,11 +13,8 @@ export async function getClienteByID(idCliente) {
 }
 
 export async function getClientesQuantidadeTotal() {
-	/**
-	 * @todo retornar para a rota original
-	 */
-	// const rota = '/cliente/clientes/quantidade-total';
-	const rota = '/clientes-quantidade-total';
+	const rota = '/cliente/clientes/quantidade-total';
+	// const rota = '/clientes-quantidade-total';
 
 	return http.get(rota);
 }

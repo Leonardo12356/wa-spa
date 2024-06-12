@@ -27,6 +27,10 @@
 
 	--color-heading: var(--vt-c-text-light-1);
 	--color-text: var(--vt-c-text-light-1);
+
+	.v-application {
+		background-color: var(--v-background-base) !important;
+	}
 }
 
 /* @media (prefers-color-scheme: dark) {

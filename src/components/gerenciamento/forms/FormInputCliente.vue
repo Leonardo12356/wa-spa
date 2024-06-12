@@ -1,5 +1,5 @@
 <script setup>
-	import { onMounted, ref } from 'vue';
+	import { computed, onMounted, ref } from 'vue';
 	import { usePostClienteAPI } from '../../../composables/core/api/cliente/usePostClienteAPI';
 	import { useRouter } from 'vue-router';
 	import { useUpdateClienteAPI } from '../../../composables/core/api/cliente/useUpdateClienteAPI';
@@ -22,7 +22,6 @@
 	const KEY_FORM = ref(1);
 
 	const baseForm = ref({
-		id: 0,
 		nome: '',
 		email: '',
 		cpf: '',
@@ -33,7 +32,6 @@
 	});
 
 	const clienteForm = ref({
-		id: 0,
 		nome: '',
 		email: '',
 		cpf: '',
@@ -42,6 +40,10 @@
 		observacao: '',
 		usuarioId: 1,
 	});
+
+	const contemClienteObjEdicao = computed(
+		() => Object.keys(props.clienteEdicao).length > 0,
+	);
 
 	const { sendCliente } = usePostClienteAPI();
 	const { sendUpdateCliente } = useUpdateClienteAPI();
@@ -89,7 +91,7 @@
 	};
 
 	onMounted(() => {
-		if (props.formModoEditar) {
+		if (props.formModoEditar && contemClienteObjEdicao.value) {
 			mapClienteParaEdicao();
 		}
 	});
@@ -110,8 +112,9 @@
 			<v-col cols="12" md="4">
 				<v-text-field
 					v-model="clienteForm.cpf"
-					:counter="11"
 					label="CPF"
+					type="number"
+					:counter="11"
 					hide-details
 					required
 				></v-text-field>
@@ -131,8 +134,9 @@
 			<v-col cols="12" md="4">
 				<v-text-field
 					v-model="clienteForm.telefone"
-					:counter="11"
 					label="Telefone"
+					type="number"
+					:counter="11"
 					hide-details
 					required
 				></v-text-field>

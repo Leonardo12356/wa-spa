@@ -2,7 +2,7 @@ import { putProduto } from '@/services/produtoService';
 import { useProdutoStore } from '@/store/produtoStore';
 import { useRetornoResponseApiModel } from '../../model/useRetornoResponseApiModel';
 
-export const useUpdateClienteAPI = () => {
+export const useUpdateProdutoAPI = () => {
 	const produtoStore = useProdutoStore();
 
 	async function sendUpdateProduto(produtoID, produtoObj) {

@@ -36,4 +36,22 @@ export const routes = [
 			requiresAuth: false,
 		},
 	},
+	{
+		path: '/produtos',
+		name: 'GerenciarProdutosView',
+		component: () => import('@/views/GerenciarProdutosView.vue'),
+		meta: {
+			title: 'Produtos',
+			requiresAuth: false,
+		},
+	},
+	{
+		path: '/produto/:idProduto?',
+		name: 'ProdutoInput[ID]View',
+		component: () => import('@/views/ProdutoInput[ID]View.vue'),
+		meta: {
+			title: 'Produto',
+			requiresAuth: false,
+		},
+	},
 ];
