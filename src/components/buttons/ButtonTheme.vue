@@ -51,5 +51,13 @@
 </script>
 
 <template>
-	<v-btn size="x-small" @click="toggleTemaApp">Alterar Tema</v-btn>
+	<v-btn
+		class=""
+		color="deep-purple-accent-1"
+		icon="mdi-theme-light-dark"
+		@click="toggleTemaApp"
+		title="alternar tema"
+	></v-btn>
 </template>
+
+<style scoped></style>

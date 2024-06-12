@@ -1,28 +1,50 @@
-import { createApp } from 'vue'
-import './assets/main.css'
+import { createApp } from 'vue';
+import './assets/main.css';
 
 // Vuetify
-import 'vuetify/styles'
-import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
-import { aliases, mdi } from 'vuetify/iconsets/mdi'
+import 'vuetify/styles';
+import { createVuetify } from 'vuetify';
+import * as components from 'vuetify/components';
+import * as directives from 'vuetify/directives';
+import { aliases, mdi } from 'vuetify/iconsets/mdi';
 
-import App from './App.vue'
+// vue-chartjs
+import {
+	Chart as ChartJS,
+	Title,
+	Tooltip,
+	Legend,
+	BarElement,
+	CategoryScale,
+	LinearScale,
+} from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
-import router from './router'
-import { createPinia } from 'pinia'
+import App from './App.vue';
+
+import router from './router';
+import { createPinia } from 'pinia';
 
 const vuetify = createVuetify({
-    components,
-    directives,
-    icons: {
-        defaultSet: 'mdi',
-        aliases,
-        sets: {
-            mdi,
-        },
-    },
-})
+	components,
+	directives,
+	icons: {
+		defaultSet: 'mdi',
+		aliases,
+		sets: {
+			mdi,
+		},
+	},
+});
 
-createApp(App).use(router).use(createPinia()).use(vuetify).mount('#app')
+ChartJS.register(
+	Title,
+	Tooltip,
+	Legend,
+	BarElement,
+	CategoryScale,
+	LinearScale,
+	ChartDataLabels,
+);
+
+createApp(App).use(router).use(createPinia()).use(vuetify).mount('#app');
