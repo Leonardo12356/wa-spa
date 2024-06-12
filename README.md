@@ -32,15 +32,12 @@ Esta é a aplicação frontend do sistema de gestão de estoque.
   - **App.vue:** Componente raiz da aplicação.
   - **main.js:** Ponto de entrada da aplicação.
 - **.env.development:** Arquivo de variáveis de ambiente para desenvolvimento.
-- **.gitignore:** Arquivo de configuração do Git para ignorar arquivos.
 - **index.html:** Arquivo HTML principal.
-- **package-lock.json:** Arquivo de bloqueio de versões do npm.
-- **package.json:** Arquivo de configuração do npm.
-- **README.md:** Documentação do projeto.
-- **vite.config.js:** Configuração do Vite.
+
 
 ## Configuração do Ambiente de Desenvolvimento
 
 1. Instale o Node.js e o npm.
 2. Clone o repositório do projeto.
 3. Navegue até o diretório do projeto e instale as dependencias com `npm i`
+4. Para roda o projeto `npm run dev` ou ajustar no `package.json` um  script de sua preferencia
