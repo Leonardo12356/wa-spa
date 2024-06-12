@@ -53,3 +53,17 @@ export async function getMaiorEstoqueProduto() {
 		},
 	});
 }
+
+export async function getMenorEstoqueProduto() {
+	/**
+	 * @todo retornar para a rota original
+	 */
+	// const rota = '/produto/produtos/estoque-zerado-negativo';
+	const rota = '/menor-estoque';
+
+	return http.get(rota, {
+		params: {
+			quantidade: '10',
+		},
+	});
+}
