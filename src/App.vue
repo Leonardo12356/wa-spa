@@ -18,7 +18,7 @@
 	<v-theme-provider :theme="temaPreferido">
 		<v-app>
 			<v-main>
-				<the-navbar></the-navbar>
+				<the-navbar v-if="$route.meta.showNavbar"></the-navbar>
 
 				<router-view />
 			</v-main>

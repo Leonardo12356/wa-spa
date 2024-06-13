@@ -1,10 +1,10 @@
-import store from '../store/index'
+import {obterTokenNaStorage} from "@/utils/localStorage.js";
 import { http } from './config'
 
 export function apiInterceptor () {
   http.interceptors.request.use(
     (config) => {
-      const token = store.getters.getAccessToken
+      const token = obterTokenNaStorage();
       config.headers.Authorization = 'Bearer ' + token
       return config
     },
