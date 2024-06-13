@@ -18,6 +18,12 @@ export function salvarTokenNaStorage(token){
     localStorage.setItem('token', token);
 }
 
-
+export function obterTokenNaStorage(){
+	return localStorage.getItem('token');
+  }
+  
+  export function removerTokenNaStorage(){
+	  localStorage.removeItem('token');
+  }
 
 
