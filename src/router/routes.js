@@ -16,7 +16,7 @@ export const routes = [
 		component: () => import('@/views/DashboardView.vue'),
 		meta: {
 			title: 'Dashboard',
-			requiresAuth: false,
+			requiresAuth: true,
 			showNavbar: true,
 		},
 	},
@@ -26,7 +26,7 @@ export const routes = [
 		component: () => import('@/views/GerenciarClientesView.vue'),
 		meta: {
 			title: 'Clientes',
-			requiresAuth: false,
+			requiresAuth: true,
 			showNavbar: true,
 		},
 	},
@@ -36,7 +36,7 @@ export const routes = [
 		component: () => import('@/views/ClienteInput[ID]View.vue'),
 		meta: {
 			title: 'Cliente',
-			requiresAuth: false,
+			requiresAuth: true,
 			showNavbar: true,
 		},
 	},
@@ -46,7 +46,7 @@ export const routes = [
 		component: () => import('@/views/GerenciarProdutosView.vue'),
 		meta: {
 			title: 'Produtos',
-			requiresAuth: false,
+			requiresAuth: true,
 			showNavbar: true,
 		},
 	},
@@ -56,7 +56,7 @@ export const routes = [
 		component: () => import('@/views/ProdutoInput[ID]View.vue'),
 		meta: {
 			title: 'Produto',
-			requiresAuth: false,
+			requiresAuth: true,
 			showNavbar: true,
 		},
 	},
@@ -66,7 +66,7 @@ export const routes = [
 		component: () => import('@/views/GerenciarUsuariosView.vue'),
 		meta: {
 			title: 'Usuarios',
-			requiresAuth: false,
+			requiresAuth: true,
 			showNavbar: true,
 		},
 	},
@@ -76,7 +76,7 @@ export const routes = [
 		component: () => import('@/views/UsuarioInput[ID]View.vue'),
 		meta: {
 			title: 'Usuario',
-			requiresAuth: false,
+			requiresAuth: true,
 			showNavbar: true,
 		},
 	},
