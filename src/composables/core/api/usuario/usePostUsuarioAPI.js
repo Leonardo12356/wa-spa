@@ -2,7 +2,7 @@ import { postUsuario } from '@/services/usuarioService';
 import { useUsuarioStore } from '@/store/usuarioStore';
 import { useRetornoResponseApiModel } from '../../model/useRetornoResponseApiModel';
 
-export const usePostusuarioAPI = () => {
+export const usePostUsuarioAPI = () => {
 	const usuarioStore = useUsuarioStore();
 
 	async function sendUsuario(usuarioObj) {

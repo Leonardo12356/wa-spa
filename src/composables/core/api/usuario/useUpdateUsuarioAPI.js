@@ -2,7 +2,7 @@ import { putUsuario } from '@/services/usuarioService';
 import { useUsuarioStore } from '@/store/usuarioStore';
 import { useRetornoResponseApiModel } from '../../model/useRetornoResponseApiModel';
 
-export const useUpdateusuarioAPI = () => {
+export const useUpdateUsuarioAPI = () => {
 	const usuarioStore = useUsuarioStore();
 
 	async function sendUpdateUsuario(usuarioID, usuarioObj) {

@@ -3,7 +3,8 @@ import { ref } from 'vue';
 import InputComponent from '@/components/input/InputComponent.vue';
 import ButtonComponent from '@/components/buttons/ButtonTheme.vue';
 import { useRouter } from 'vue-router';
-import usuarioService from '@/services/usuarioService.js';
+import {} from '@/services/usuarioService.js';
+import utilsStorage from '@/utils/localStorage.js';
 
 const router = useRouter();
 const usuario = ref({
@@ -11,9 +12,10 @@ const usuario = ref({
   senha: ''
 });
 
+
+const login = () => {
   usuarioService.autenticarUsuario(usuario.value.email, usuario.value.senha)
     .then(response => {
-      usuario.value = new Usuario(response.data.usuario);
       utilsStorage.salvarItemLocalStorage(usuario.value);
       utilsStorage.salvarTokenNaStorage(response.data.token);
       router.push({ name: "DashboardView" });
@@ -21,6 +23,7 @@ const usuario = ref({
     .catch(error => {
       console.log(error);
     });
+};
 </script>
 
 <template>
@@ -41,7 +44,7 @@ const usuario = ref({
     />
     <ButtonComponent 
       value="Entrar" 
-      :callback="login" 
+      @click="login" 
     />
   </div>
 </template>
