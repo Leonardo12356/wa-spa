@@ -1,8 +1,8 @@
-import { getUsuarios } from '@/services/usuarioService.js';
+import { getUsuarios } from '@/services/usuarioService';
 import { useUsuarioStore } from '@/store/usuarioStore';
 import { useRetornoResponseApiModel } from '../../model/useRetornoResponseApiModel';
 
-export const useGetusuariosAPI = () => {
+export const useGetUsuariosAPI = () => {
 	const usuarioStore = useUsuarioStore();
 
 	async function fetchUsuarios() {
@@ -10,7 +10,7 @@ export const useGetusuariosAPI = () => {
 			const response = await getUsuarios();
 
 			if (response.status === 200) {
-				usuarioStore.setusuarios(response.data);
+				usuarioStore.setUsuarios(response.data);
 
 				return useRetornoResponseApiModel({
 					sucesso: true,
