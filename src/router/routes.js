@@ -7,6 +7,7 @@ export const routes = [
 		meta: {
 			title: 'Login',
 			requiresAuth: false,
+			showNavbar: false,
 		},
 	},
 	{
@@ -16,6 +17,7 @@ export const routes = [
 		meta: {
 			title: 'Dashboard',
 			requiresAuth: false,
+			showNavbar: true,
 		},
 	},
 	{
@@ -25,6 +27,7 @@ export const routes = [
 		meta: {
 			title: 'Clientes',
 			requiresAuth: false,
+			showNavbar: true,
 		},
 	},
 	{
@@ -34,6 +37,7 @@ export const routes = [
 		meta: {
 			title: 'Cliente',
 			requiresAuth: false,
+			showNavbar: true,
 		},
 	},
 	{
@@ -43,6 +47,7 @@ export const routes = [
 		meta: {
 			title: 'Produtos',
 			requiresAuth: false,
+			showNavbar: true,
 		},
 	},
 	{
@@ -52,6 +57,30 @@ export const routes = [
 		meta: {
 			title: 'Produto',
 			requiresAuth: false,
+			showNavbar: true,
+		},
+	},
+	{
+		path: '/usuarios',
+		name: 'GerenciarUsuariosView',
+		component: () => import('@/views/GerenciarUsuariosView.vue'),
+		meta: {
+			title: 'Usuarios',
+			requiresAuth: false,
+			showNavbar: true,
+		},
+	},
+	{
+		path: '/usuario/:idusuario?',
+		name: 'UsuarioInput[ID]View',
+		component: () => import('@/views/UsuarioInput[ID]View.vue'),
+		meta: {
+			title: 'Usuario',
+			requiresAuth: false,
+			showNavbar: true,
 		},
 	},
 ];
+
+
+  
