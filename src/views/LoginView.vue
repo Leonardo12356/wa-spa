@@ -1,17 +1,26 @@
 <script setup>
 import { ref } from 'vue';
 import InputComponent from '@/components/input/InputComponent.vue';
-import ButtonComponent from '@/components/button/ButtonComponent.vue';
+import ButtonComponent from '@/components/buttons/ButtonTheme.vue';
+import { useRouter } from 'vue-router';
+import usuarioService from '@/services/usuarioService.js';
 
+const router = useRouter();
 const usuario = ref({
   email: '',
   senha: ''
 });
 
-const login = () => {
-//TODO implemntar a logica
-  console.log('Login:', usuario.value);
-};
+  usuarioService.autenticarUsuario(usuario.value.email, usuario.value.senha)
+    .then(response => {
+      usuario.value = new Usuario(response.data.usuario);
+      utilsStorage.salvarItemLocalStorage(usuario.value);
+      utilsStorage.salvarTokenNaStorage(response.data.token);
+      router.push({ name: "DashboardView" });
+    })
+    .catch(error => {
+      console.log(error);
+    });
 </script>
 
 <template>

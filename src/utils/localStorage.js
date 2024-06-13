@@ -13,3 +13,11 @@ export function removerItemLocalStorage(key) {
 export function limparLocalStorage() {
 	return localStorage.clear();
 }
+
+export function salvarTokenNaStorage(token){
+    localStorage.setItem('token', token);
+}
+
+
+
+

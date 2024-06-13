@@ -54,4 +54,22 @@ export const routes = [
 			requiresAuth: false,
 		},
 	},
+	{
+		path: '/usuarios',
+		name: 'GerenciarUsuariosView',
+		component: () => import('@/views/GerenciarUsuariosView.vue'),
+		meta: {
+			title: 'Usuarios',
+			requiresAuth: false,
+		},
+	},
+	{
+		path: '/usuario/:idusuario?',
+		name: 'UsuarioInput[ID]View',
+		component: () => import('@/views/UsuarioInput[ID]View.vue'),
+		meta: {
+			title: 'Usuario',
+			requiresAuth: false,
+		},
+	},
 ];

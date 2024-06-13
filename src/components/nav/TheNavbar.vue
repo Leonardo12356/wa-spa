@@ -9,6 +9,7 @@
 		{ nomeRota: 'DashboardView', titulo: 'Dashboard' },
 		{ nomeRota: 'GerenciarProdutosView', titulo: 'Produtos' },
 		{ nomeRota: 'GerenciarClientesView', titulo: 'Clientes' },
+		{ nomeRota: 'GerenciarUsuariosView', titulo: 'Usuarios' },
 	]);
 
 	const autoRedirecionarRota = (itemMenu) => {
